@@ -4,12 +4,16 @@ public class QuickSort {
     static int counter = 1;
 
     static void quickSort(int[] array) {
+
         quickSortFunc(array, 0, array.length - 1);
+
         counter = 1;
     }
 
     static void quickSortFunc(int[] array, int low, int high) {
+
         if (low < high) {
+
             int separation = partition(array, low, high);
 
             quickSortFunc(array, low, separation - 1);
@@ -18,7 +22,8 @@ public class QuickSort {
     }
 
     private static int partition(int[] array, int low, int high) {
-        // Randomly choose a pivot to improve average case
+
+        // Index aleatório para melhorar performance
         int randomIndex = ThreadLocalRandom.current().nextInt(low, high + 1);
         swap(array, randomIndex, high);
 
@@ -26,10 +31,13 @@ public class QuickSort {
         int lastChangedIndex = low;
 
         for (int i = low; i < high; i++) {
+
             if (array[i] <= pivot) {
+
                 swap(array, lastChangedIndex, i);
                 lastChangedIndex++;
                 printStep(array);
+
             }
         }
 
@@ -39,6 +47,7 @@ public class QuickSort {
     }
 
     private static void swap(int[] array, int i, int j) {
+
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
