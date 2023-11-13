@@ -22,7 +22,6 @@ public class QuickSort {
     }
 
     private static int partition(int[] array, int low, int high) {
-
         // Index aleatório para melhorar performance
         int randomIndex = ThreadLocalRandom.current().nextInt(low, high + 1);
         swap(array, randomIndex, high);
@@ -33,7 +32,6 @@ public class QuickSort {
         for (int i = low; i < high; i++) {
 
             if (array[i] <= pivot) {
-
                 swap(array, lastChangedIndex, i);
                 lastChangedIndex++;
                 printStep(array);
@@ -47,7 +45,6 @@ public class QuickSort {
     }
 
     private static void swap(int[] array, int i, int j) {
-
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
