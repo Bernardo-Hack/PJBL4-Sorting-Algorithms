@@ -17,6 +17,7 @@ Os algoritimos implementados foram:
 
 ### Sobre cada Algoritmo
 Todos os algoritimicos imprimem cada passo em que ocorre alguma alteração na ordem da lista.
+<img src="https://github.com/Bernardo-Hack/PJBL4-Sorting-Algorithms/blob/main/prints/stepPrintFunc.png" width="300px;" alt="Função que imprime os numeruzinho fofo"> 
 
 #### Bubble-Sort 
 Bubble Sort é um algoritmo simples de ordenação que percorre uma lista várias vezes, compara elementos adjacentes e os troca se estiverem fora de ordem, afim de "carregar" o maior valor para o final da lista a cada iteração. Este processo é repetido até que a lista esteja ordenada. Apesar de sua simplicidade, não é eficiente para grandes conjuntos de dados.
