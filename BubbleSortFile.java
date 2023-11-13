@@ -1,18 +1,20 @@
 public class BubbleSortFile {
+    static int counter = 1;
 
-    static void bubbleSortFunc(int[] array, int size) {
-        boolean didChange = false;
+    static void bubbleSort(int[] array) {
+        bubbleSortFunc(array, array.length);
+
+        counter = 1;
+    }
+
+    private static void bubbleSortFunc(int[] array, int size) {
 
         for (int checkedIndex = 0; checkedIndex < size - 1; checkedIndex++) {
 
             if (array[checkedIndex] > array[checkedIndex + 1]) {
                 swap(array, checkedIndex);
-                didChange = true;
+                printStep(array);
             }
-        }
-
-        if (didChange) {
-            printStep(array, size);
         }
 
         if (size > 0) {
@@ -20,16 +22,15 @@ public class BubbleSortFile {
         }
     }
 
-    static void swap(int[] array, int index) {
+    private static void swap(int[] array, int index) {
         int aux = array[index];
         array[index] = array[index + 1];
         array[index + 1] = aux;
     }
 
-    private static void printStep(int[] array, int stepNum) {
+    private static void printStep(int[] array) {
 
-        stepNum = (array.length - stepNum) + 1;
-        System.out.print("Passo número " + stepNum + ": [");
+        System.out.print("Passo número " + counter + ": [");
 
         for (int i = 0; i != array.length; i++) {
 
@@ -42,6 +43,7 @@ public class BubbleSortFile {
 
         }
         System.out.println("");
+        counter++;
     }
 }
 
