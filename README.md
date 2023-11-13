@@ -17,6 +17,7 @@ Os algoritimos implementados foram:
 
 ### Sobre cada Algoritmo
 Todos os algoritimicos imprimem cada passo em que ocorre alguma alteração na ordem da lista.
+
 <img src="https://github.com/Bernardo-Hack/PJBL4-Sorting-Algorithms/blob/main/prints/stepPrintFunc.png" width="300px;" alt="Função que imprime os numeruzinho fofo"> 
 
 #### Bubble-Sort 
