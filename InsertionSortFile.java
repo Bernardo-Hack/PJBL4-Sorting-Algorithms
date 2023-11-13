@@ -1,6 +1,7 @@
 public class InsertionSortFile {
+    static int counter = 1;
 
-    static void insertSortFunc(int[] array) {
+    static void insertSort(int[] array) {
 
         for (int i = 1; i != array.length; i++) {
 
@@ -16,11 +17,13 @@ public class InsertionSortFile {
             printStep(array, i);
 
         }
+
+        counter = 1;
     }
 
     private static void printStep(int[] array, int stepNum) {
 
-        System.out.print("Passo número " + stepNum + ": [");
+        System.out.print("Passo número " + counter + ": [");
 
         for (int i = 0; i != array.length; i++) {
 
@@ -33,5 +36,6 @@ public class InsertionSortFile {
             
         }
         System.out.println("");
+        counter++;
     }
 }
